@@ -6,20 +6,19 @@ var ArticleSchema = new Schema({
 	
 	title: {
 		type: String,
-		unique: true
+		required: true
 	},
-	link: {
+
+	date: {
 		type: String
+		required: true
 	},
+
 	url: {
 		type: String,
 		required: true
 	}
-	//favorite? TODO
-	// favorite: [{
-	// 	type: Schema.Types.ObjectId,
-	// 	ref: "favorite"
-	// }]
+
 });
 
 var Article = mongoose.model("Article", ArticleSchema);
