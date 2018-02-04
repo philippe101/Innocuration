@@ -1,0 +1,23 @@
+.jumbotron {
+	background-image: url(../Images/img1.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	color: white;
+	text-align: center;
+}
+
+.jumbotron { min-height: 500px; }
+
+/*.jumbotron {
+    padding: 0.5em 0.6em;
+    h1 {
+        font-size: 15em;
+    }
+    p {
+        font-size: 1.2em;
+        .btn {
+            padding: 0.5em;
+        }
+    }
+}*/
