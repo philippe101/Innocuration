@@ -9,27 +9,12 @@ class Home extends Component {
 		return (
 			<div>
 			<Navbar />
-			<Jumbotron title="innocurate" subtitle="Expand your horizons!" />
+			<Jumbotron title="innoCurate" subtitle="Expand your horizons!" />
 			 <div className="container">
-				<h2>Welcome</h2>
-				<p>	
-				</p>
-				<li>
-				<div class="button">
-				<a href="button" class="button__link">TEA</a>
-				</div>
-				</li>
-				<li>
-				<div class="button">
-				<a href="button" class="button__link">OR</a>
-				</div>
-				</li>
-				<li>
-				<div class="button">
-				<a href="button" class="button__link">COFFEE</a>
-				</div>
-				</li>
-				</div>
+				<h2><center>Welcome</center></h2>
+				
+			
+			</div>
 			</div>
 
 		);

@@ -1,11 +1,14 @@
 body{
 	background-color: #CBE32D;
+	background-image: url(../Images/img1.png);
 }
 
 li {
-  width: 15%;
+  width: 25%;
   display: inline-block;
   display: center;
+  padding-left: 0%;
+  padding-right: 20px;
 }
 
 .button {
@@ -17,7 +20,7 @@ li {
 }
 
 .button__link {
-    border: 1px solid red;
+    border: 0px solid red;
     display: block;
     width: 100%;
     padding-top: 50%;
@@ -29,9 +32,11 @@ li {
     font-size: 2em;
     margin-top: -1em;
     background: #E9C46A; 
+
+
   }
 
-  &__link {
+ /* &__link {
     border: 1px solid red;
     display: block;
     width: 100%;
@@ -45,3 +50,29 @@ li {
     margin-top: -1em;
     background: #E9C46A; 
   }
+*/
+
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 960px; /* 2 */
+
+  padding-right: 10px; /* 3 */
+  padding-left:  10px; /* 3 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
