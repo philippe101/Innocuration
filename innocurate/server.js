@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({
 	extended: false
 }));
 
-app.use(methodOverride('_method'));
+// app.use(methodOverride('_method'));
 
 app.use(express.static("./public"));
 
@@ -58,109 +58,109 @@ db.once("open", function() {
 });
 
 
-var Article = require('./models/Article.js');
+// var Article = require('./models/Article.js');
 
 //Routes
-app.get("/", function(req, res) {
-	Article.find({},function (error, data) {
-		if (error) {
-			res.send(error);			
-		}
-		else {
-			var newsObj = {
-				Article: data
-			};
-			res.render("index", newsObj);
-		}
-	});
-});
+// app.get("/", function(req, res) {
+// 	Article.find({},function (error, data) {
+// 		if (error) {
+// 			res.send(error);			
+// 		}
+// 		else {
+// 			var newsObj = {
+// 				Article: data
+// 			};
+// 			res.render("index", newsObj);
+// 		}
+// 	});
+// });
 
-app.get("/scrape", function(req, res) {
-	request("http://archive.org", function(error, response, html){
-		var $ = cheerio.load(html);
+// app.get("/scrape", function(req, res) {
+// 	request("http://archive.org", function(error, response, html){
+// 		var $ = cheerio.load(html);
 
-		$("h4.headline-link").each(function(i, element) {
+// 		$("h4.headline-link").each(function(i, element) {
 
-			var result = {};
+// 			var result = {};
 
-			result.title = $(this).text();
-			result.link = $(this).parent("a").attr("href");
+// 			result.title = $(this).text();
+// 			result.link = $(this).parent("a").attr("href");
 
-			var entry = new Article(result);
+// 			var entry = new Article(result);
 
-			entry.save(function(err, doc) {
-				if(err) {
-					console.log(err);
-				}
-				else {
-					console.log(doc);
-				}
-			});
-		});
-		res.redirect("/");
-		console.log("Successfully Scraped");
-	});
-});
+// 			entry.save(function(err, doc) {
+// 				if(err) {
+// 					console.log(err);
+// 				}
+// 				else {
+// 					console.log(doc);
+// 				}
+// 			});
+// 		});
+// 		res.redirect("/");
+// 		console.log("Successfully Scraped");
+// 	});
+// });
 
-app.post("/notes/:id", function(req, res) {
-	var newNote = new Note(req.body);
-	newNote.save(function (error, doc) {
-		if (error) {
-			console.log(error);
-		}
-		else {
-			console.log("this is the DOC " + doc);
-			Article.findOneAndUpdate({
-				"_id": req.params.id 
-			},
-				{ $push: { "note": doc._id } }, {new: true}, function(err, doc) {
-					if (err) {
-						console.log(err);
-					}
-					else {
-						console.log("note saved: " + doc);
-						res.redirect("/notes/" + req.params.id);
-					}
-			});
-		}
-	});
-});
+// app.post("/notes/:id", function(req, res) {
+// 	var newNote = new Note(req.body);
+// 	newNote.save(function (error, doc) {
+// 		if (error) {
+// 			console.log(error);
+// 		}
+// 		else {
+// 			console.log("this is the DOC " + doc);
+// 			Article.findOneAndUpdate({
+// 				"_id": req.params.id 
+// 			},
+// 				{ $push: { "note": doc._id } }, {new: true}, function(err, doc) {
+// 					if (err) {
+// 						console.log(err);
+// 					}
+// 					else {
+// 						console.log("note saved: " + doc);
+// 						res.redirect("/notes/" + req.params.id);
+// 					}
+// 			});
+// 		}
+// 	});
+// });
 
-app.get("/notes/:id", function(req, res) {
-	console.log("This is the req.params: " + req.params.id);
-	Article.find({
-		"_id": req.params.id
-	})
-	.populate("note")
-	.exec(function(error, doc) {
-		if (error) {
-			console.log(error);
-		}
-		else {
+// app.get("/notes/:id", function(req, res) {
+// 	console.log("This is the req.params: " + req.params.id);
+// 	Article.find({
+// 		"_id": req.params.id
+// 	})
+// 	.populate("note")
+// 	.exec(function(error, doc) {
+// 		if (error) {
+// 			console.log(error);
+// 		}
+// 		else {
 
-			var notesObj = {
-				Article: doc
-			};
-			console.log(notesObj);
-		}
-	});
-});
+// 			var notesObj = {
+// 				Article: doc
+// 			};
+// 			console.log(notesObj);
+// 		}
+// 	});
+// });
 
 
-app.post("/delete/:id", function(req, res) {
-	Article.remove({
-		"_id": req.params.id
-	})
-	.exec(function(error, doc) {
-		if (error) {
-			console.log(error);
-		}
-		else {
-			console.log("note deleted");
-			res.redirect("/");
-		}
-	});
-});
+// app.post("/delete/:id", function(req, res) {
+// 	Article.remove({
+// 		"_id": req.params.id
+// 	})
+// 	.exec(function(error, doc) {
+// 		if (error) {
+// 			console.log(error);
+// 		}
+// 		else {
+// 			console.log("note deleted");
+// 			res.redirect("/");
+// 		}
+// 	});
+// });
 
 
 

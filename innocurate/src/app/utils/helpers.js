@@ -3,7 +3,7 @@ var axios = require('axios');
 
 var articleQuery = function(topic, beginYear, endYear){
 
-  var authKey = "";
+  var authKey = "11cb27dfc7c14674b76205dc56372b93";
 
   var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey + "&q=" +
                   topic + "&begin_date=" + beginYear + "0101" + "&end_date=" + endYear + "1231";

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Jumbotron.css';
 
 class Jumbotron extends Component {
@@ -12,20 +13,14 @@ class Jumbotron extends Component {
 				<div class="wrapper">
 				<li>
 				<div class="button">
-				<a href="button" class="button__link">TEA</a>
+				<Link className="button__link" to="/tea">Tea</Link>
 				</div>
 				</li>
 				<li>
-				<p>	
-
-
-
-
-				</p>
 				</li>	
 				<li>
 				<div class="button">
-				<a href="button" class="button__link">COFFEE</a>
+				<Link className="button__link" to="/coffee">Coffee</Link>
 				</div>
 				</li>
 				</div>

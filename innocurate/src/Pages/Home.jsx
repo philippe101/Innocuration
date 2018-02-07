@@ -9,11 +9,11 @@ class Home extends Component {
 		return (
 			<div>
 			<Navbar />
-			<Jumbotron title="innoCurate" subtitle="Expand your horizons!" />
+			<Jumbotron title="uCurate" subtitle="Expand your horizons!"/>
 			 <div className="container">
 				<h2><center>Welcome</center></h2>
-				
-			
+				<p>
+				</p>	
 			</div>
 			</div>
 

@@ -17,14 +17,13 @@ var Saved = React.createClass({
     
     var articleMongoId = event.target.value;
 
-  
-    var that = this;
+
 
     helpers.apiDelete(articleMongoId).then(function(){
 
     
       helpers.apiGet().then(function(query){
-        that.props._resetMongoResults(query.data);
+        this.props._resetMongoResults(query.data);
       });
 
     });
@@ -35,8 +34,6 @@ var Saved = React.createClass({
   
   render: function() {
 
-
-    var that = this;
 
     return (
 
@@ -59,7 +56,7 @@ var Saved = React.createClass({
                       <i> {search.date.substring(0, 10)}</i>
                     </div>
                     <span className="input-group-btn">
-                      <button className="btn btn-danger" type="button" onClick={that._handleDelete} value={search._id}>Remove</button>
+                      <button className="btn btn-danger" type="button" onClick={this._handleDelete} value={search._id}>Remove</button>
                     </span>
                   </div>
                 </li>

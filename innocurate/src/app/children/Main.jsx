@@ -46,7 +46,7 @@ var Main = React.createClass({
 	 		<div className="container" style={ {backgroundColor: "white", borderStyle: "solid", borderWidth: "1px"} }>
 
 	 		<div className="page-header">
-	 			<h1 className="text-center"><img style={ {width: 70%} } src= "img     " alt="The Internet Archive"/></h1>
+	 			<h1 className="text-center"><img style={ {width: 70%} } src= "img     " alt="The News"/></h1>
 	 			<h2 className="text-center" style={ {marginTop: "-12px"} }><b><i>A React Rendition</i></b></h2>
 	 			<h4 className="text-center">Search for articles of interest.</h4>
 	 		</div>

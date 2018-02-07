@@ -18,6 +18,16 @@ router.get("/api/saved", function(req, res) {
 		else {
 			res.json(docs);
 		}
+		// var resultData = [];
+
+		// data.forEach(function (article) {
+		// 	resultData.push({
+		// 		title: article.title,
+		// 		url: article.url
+		// 	});
+		}
+		// res.send(resultData);
+		
 	});
 });
 
@@ -40,6 +50,7 @@ router.post("/api/saved", function(req, res) {
 
 router.post("api/delete/:articleMongoId", function(req, res) {
 	console.log(req.params.articleMongoId)
+	
 	Article.findByAndRemove(req.params.articleMongoId, function(err, todo) {
 		if(err) {
 			console.log(err);

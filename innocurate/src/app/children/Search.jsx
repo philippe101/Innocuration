@@ -25,14 +25,13 @@ var Search = React.createClass({
     }
 
 
-    var that = this;
+
 
     helpers.apiSave(saveArticleObj).then(function(){
-
       
   
       helpers.apiGet().then(function(query){
-        that.props._resetMongoResults(query.data);
+        this.props._resetMongoResults(query.data);
       });
 
 
@@ -43,7 +42,6 @@ var Search = React.createClass({
 
   render: function() {
 
-    var that = this;
 
     return (
 
@@ -59,7 +57,7 @@ var Search = React.createClass({
             
             {this.props.apiResults.map(function(search, i) {
             
-              that.state.arrayOfArticles.push({
+              this.state.arrayOfArticles.push({
                 id: search._id,
                 title: search.headline.main,
                 date: search.pub_date,
@@ -73,7 +71,7 @@ var Search = React.createClass({
                       <i> {search.pub_date.substring(0, 10)}</i>
                     </div>       
                     <span className="input-group-btn">
-                      <button className="btn btn-success" type="button" onClick={that._handleSave} value={search._id}>Save</button>
+                      <button className="btn btn-success" type="button" onClick={this._handleSave} value={search._id}>Save</button>
                     </span>
                   </div>
                 </li>

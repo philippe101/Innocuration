@@ -8,19 +8,20 @@ class Coffee extends Component {
 		return (
 			<div>
 			<Navbar />
-			<Jumbotron title="Explore your world" subtitle="" />
 			 <div className="container">
-				<h2>Archive</h2>
-				<p>
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-				Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-				when an unknown printer took a galley of type and scrambled it to make a type 
-				specimen book. It has survived not only five centuries, but also the leap into 
-				electronic typesetting, remaining essentially unchanged. It was popularised in 
-				the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-				and more recently with desktop publishing software like Aldus PageMaker including 
-				versions of Lorem Ipsum.
-				</p>
+
+				<iframe
+   				id="slideshow_frame"
+   				src="https://archive.org/"
+   				frameborder="0"
+   				padding-top="20px"
+   				width="100%"
+   				height="650px"
+   				marginheight="10%"
+   				marginwidth="0"
+  				scrolling="yes">
+  			</iframe>
+
 				</div>
 			</div>
 
