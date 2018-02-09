@@ -9,21 +9,21 @@ class Tea extends Component {
 		return (
 			<div>
 			<Navbar />
-			 <div className="container">
-
+			<div className="container">
+			 <h1> Meditate</h1>
+			 <h1>Clear your Mind !</h1>
 			<iframe
    				id="slideshow_frame"
    				src="https://archive.org/details/naturesounds-soundtheraphy/Relaxing+Nature+Sounds+-+Birdsong+Sound.mp3"
    				frameborder="0"
    				padding-top="20px"
    				width="100%"
-   				height="350px"
-   				marginheight="10%"
+   				height="400px"
+   				marginheight="0"
    				marginwidth="0"
   				scrolling="no">
   			</iframe>
-
-			
+			 
 				</div>
 			</div>
 		

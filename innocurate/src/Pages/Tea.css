@@ -13,5 +13,13 @@ body{
 }
 
 h1, p {
-	color: white;
+	color: red;
+	text-align: center;
+}
+h2, {
+	text-align: center;
+}
+
+iframe {
+	padding-top: 5%;
 }

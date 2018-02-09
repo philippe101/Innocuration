@@ -9,18 +9,19 @@ class Coffee extends Component {
 			<div>
 			<Navbar />
 			 <div className="container">
-
-				<iframe
+			<iframe
    				id="slideshow_frame"
    				src="https://archive.org/"
    				frameborder="0"
-   				padding-top="20px"
+   				padding-top="15px"
+   				padding-bottom="15px"
    				width="100%"
-   				height="650px"
+   				height="600px"
    				marginheight="10%"
    				marginwidth="0"
   				scrolling="yes">
   			</iframe>
+  			<h1>Expand your mind!</h1>
 
 				</div>
 			</div>
