@@ -11,7 +11,6 @@ class Tea extends Component {
 			<Navbar />
 			<div className="container">
 			 <h1> Meditate</h1>
-			 <h1>Clear your Mind !</h1>
 			<iframe
    				id="slideshow_frame"
    				src="https://archive.org/details/naturesounds-soundtheraphy/Relaxing+Nature+Sounds+-+Birdsong+Sound.mp3"
@@ -23,7 +22,8 @@ class Tea extends Component {
    				marginwidth="0"
   				scrolling="no">
   			</iframe>
-			 
+			 <h1>Clear your Mind!</h1>
+			 <h3>(close your eyes focus on your breath)</h3>
 				</div>
 			</div>
 		

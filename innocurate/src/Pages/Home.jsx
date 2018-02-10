@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navbar from '../components/Navbar.jsx';
 import Jumbotron from '../components/Jumbotron.jsx';
 import './Home.css';
-import Axios from "axios";
+import axios from "axios";
 
 
 class Home extends Component {
@@ -14,20 +14,20 @@ class Home extends Component {
 
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
-    const  email  = event.target.name;
-    const  password  = event.target.value;
+    const  name  = event.target.name;
+    const  value  = event.target.value;
+
+    console.log(name, value)
 
     // Updating the input's state
     this.setState({
-      email: email,
-      password: password
-    });
+      [name] : value    });
   };
 
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-    Axios.post("/login", {email: this.state.email, password: this.state.password});
+    axios.post("/user", {email: this.state.email, password: this.state.password});
 }
 
 	render() {
