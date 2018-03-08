@@ -1,8 +1,7 @@
 {
   "name": "innocurate",
   "version": "0.1.0",
-  "description": "",
-  "main": "server.js",
+  "private": true,
   "homepage": "https://philippe101.github.io/Innocuration",
   "dependencies": {
     "axios": "^0.17.1",
