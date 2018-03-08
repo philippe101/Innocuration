@@ -16,14 +16,11 @@ h1, p {
 	color: red;
 	text-align: center;
 }
-h2, h3 {
+
+h2, {
 	text-align: center;
 }
 
 iframe {
 	padding-top: 5%;
-}
-
-h3, {
-	text-align: center;
 }
