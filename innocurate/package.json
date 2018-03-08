@@ -8,6 +8,7 @@
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.2",
+    "gh-pages": "^1.1.0",
     "method-override": "^2.3.10",
     "mongoose": "^5.0.3",
     "passport": "^0.4.0",
@@ -20,6 +21,8 @@
     "request": "^2.83.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
